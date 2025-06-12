@@ -5,6 +5,7 @@ class Queues {
     int FRONT, REAR, max = 5;
     int queue_array[5];
 
+
 public:
     Queues() {
         FRONT = -1;
@@ -16,6 +17,7 @@ public:
         cout << "Enter a number: ";
         cin >> num;
         cout << endl;
+    }
 
     if ((FRONT == 0 && REAR == max - 1) || (REAR == (FRONT - 1) % (max - 1))) {
         cout << "\nQueue overflow\n";
@@ -33,4 +35,11 @@ public:
             REAR = REAR + 1;
     }
     queue_array[REAR] = num;
+
+    void remove() {
+        if (FRONT == -1) {
+            cout << "\nQueue underflow\n";
+            return;
+        }       
+    }
 }
