@@ -16,10 +16,14 @@ public:
         cout << "Enter a number: ";
         cin >> num;
         cout << endl;
-    }
 
     if ((FRONT == 0 && REAR == max - 1) || (REAR == (FRONT - 1) % (max - 1))) {
         cout << "\nQueue overflow\n";
         return;
     }
+
+    if (FRONT == -1) {
+        FRONT = 0;
+        REAR = 0;
+    } 
 }
