@@ -63,5 +63,14 @@ public:
             cout << "\nQueue is empty\n";
             return;
         }
+
+        cout << "\nElements in the queue are...\n";
+
+        if (FRONT_position <= REAR_position) {
+            while (FRONT_position <= REAR_position) {
+                cout << queue_array[FRONT_position] << " ";
+                FRONT_position++;
+            }
+        }
     }
 }
